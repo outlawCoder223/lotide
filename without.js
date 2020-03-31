@@ -38,4 +38,5 @@ assertArraysEqual(words, [ 'hello', 'world', 'lighthouse' ]);
 assertArraysEqual(without([ '1', '2', '3' ], [ 1, 2, '3' ]), [ '1', '2' ]);
 // Function working properly
 assertArraysEqual(without([ 1, 2, 3, 4 ], [ 1, 2 ]), [ 3, 4 ]);
-assertArraysEqual(without([ 'slim', 'shady' ], [ 'eminem' ]), [ 'slim', 'shady' ]);
+// Empty array returns new source array
+assertArraysEqual(without([ 'slim', 'shady' ], []), [ 'slim', 'shady' ]);
