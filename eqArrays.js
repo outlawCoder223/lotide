@@ -7,14 +7,15 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
+  if (arr1.length !== arr2.length) return false;
+  for (let i = 0; i < arr1.length; i++) {
+    if (Array.isArray(arr1[i])) {
+      if (!eqArrays(arr1[i], arr2[i])) return false;
+    } else {
       if (arr1[i] !== arr2[i]) return false;
     }
-    return true;
   }
+  return true;
 };
 
 // Test Cases:
@@ -27,3 +28,14 @@ assertEqual(eqArrays([ '1', '2', '3' ], [ '1', '2', '3' ]), true);
 assertEqual(eqArrays([ '1', '2', '3' ], [ '1', '2', 3 ]), false);
 // Length tests
 assertEqual(eqArrays([ 1, 2, 3, 4 ], [ 1, 2 ]), false);
+// Nested arrays tests
+assertEqual(eqArrays([ 1, 2, [ 3, 4, [ 5, 6 ] ] ], [ 1, 2, [ 3, 4, [ 5, 6 ] ] ]), true);
+assertEqual(eqArrays([ 'a', 'b', 'c', [ 1, 2, 3 ] ], [ 'a', 'b', 'c', [ 1, 2 ] ]), false);
+assertEqual(eqArrays([ 1, 2, [ undefined, 5, 3 ], 't', 'j' ], [ [ 2, 3, 4 ], 3, 2, [ 5, 6 ], 4 ]), false);
+assertEqual(
+  eqArrays(
+    [ 1, (2)[(3, 4, 5)], [ 'a', 'b' ], [ [ [ 3, 4 ] ] ] ],
+    [ 1, (2)[(3, 4, 5)], [ 'a', 'b' ], [ [ [ 3, 4 ] ] ] ]
+  ),
+  true
+);
