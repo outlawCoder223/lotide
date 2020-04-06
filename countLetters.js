@@ -1,11 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
+// counts the number of letters in a sentence and returns an object with the count
 const countLetters = function(sentence) {
   let cleanSentence = sentence.toLowerCase().split(' ').join('');
   const letterCount = {};
@@ -19,12 +12,4 @@ const countLetters = function(sentence) {
   return letterCount;
 };
 
-// Test Cases:
-
-const letters1 = countLetters('slim shady');
-const letters2 = countLetters('RaNcE CaMPbeLl');
-
-assertEqual(letters1['s'], 2);
-assertEqual(letters2['l'], 2);
-assertEqual(letters2[' '], undefined);
-assertEqual(letters2['E'], undefined);
+module.exports = countLetters;
