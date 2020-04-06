@@ -1,6 +1,7 @@
 // Tests for flatten.js
 const assert = require('chai').assert;
 const flatten = require('../flatten');
+
 describe('#flatten', () => {
   it('returns a single array if passed a single array', () => {
     const arr = [ 1, 2, 3, 4, 5 ];
