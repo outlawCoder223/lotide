@@ -1,6 +1,7 @@
 // Tests for without.js
 const assert = require('chai').assert;
 const without = require('../without');
+
 describe('#without', () => {
   it('does not mutate original array', () => {
     const nums = [ -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 ];
