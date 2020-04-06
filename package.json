@@ -1,0 +1,28 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "various functions to make working in Javascript easier",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rancewcampbell/lotide.git"
+  },
+  "author": "Rance Campbell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rancewcampbell/lotide/issues"
+  },
+  "homepage": "https://github.com/rancewcampbell/lotide#readme"
+}
