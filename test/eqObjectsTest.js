@@ -24,7 +24,7 @@ describe('#eqObjects', () => {
   it('returns false if keys have unequal arrays as values', () => {
     const cd = { c: '1', d: [ '2', 3 ]};
     const dc = { d: [ 2, 3 ], c: '1'};
-    const result = eqObjects(cd, dc)
+    const result = eqObjects(cd, dc);
     assert.isFalse(result);
   });
   it('returns true if keys have equal objects as values', () => {
