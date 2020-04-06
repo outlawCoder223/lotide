@@ -1,5 +1,5 @@
 // Returns the middle element of an odd length array or
-// the middle two elements of an even array.
+// the middle two elements of an even length array.
 const middle = function(arr) {
   const middleOfArr = [];
   let midIndex;
