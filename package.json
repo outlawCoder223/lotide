@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@rancewcampbell/lotide",
   "version": "1.0.0",
-  "description": "various functions to make working in Javascript easier",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library.",
   "main": "index.js",
   "directories": {
     "test": "test"
