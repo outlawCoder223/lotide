@@ -1,3 +1,4 @@
+// Contains all functions in Lotide library
 const countLetters = require('./countLetters');
 const countOnly = require('./countOnly');
 const eqArrays = require('./eqArrays');
