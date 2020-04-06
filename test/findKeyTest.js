@@ -9,7 +9,7 @@ describe('#findKey', () => {
     assert.equal(result, 'c');
   });
   it('returns the first key to match the callback passed in', () => {
-    const result = findKey(obj, key => key === 2);
+    const result = findKey(obj, key => key > 1);
     assert.equal(result, 'b');
   });
   it('returns undefined if there is no match', () => {
