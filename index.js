@@ -6,6 +6,7 @@ const countOnly = require('./countOnly');
 const eqArrays = require('./eqArrays');
 const eqObjects = require('./eqObjects');
 const findKey = require('./findKey');
+const findKeyByValue = require('./findKeyByValue');
 
 module.exports = {
   head,
@@ -15,5 +16,6 @@ module.exports = {
   countOnly,
   eqArrays,
   eqObjects,
-  findKey
+  findKey,
+  findKeyByValue,
 };
